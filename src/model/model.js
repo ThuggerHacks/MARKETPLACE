@@ -74,8 +74,20 @@ const purchase = new Schema({
     }
 });
 
+const todo = new Schema({
+    title:{
+        type:String,
+        required:true
+    },
+    status:{
+        type:Boolean,
+        default:false
+    }
+});
+
 const productData = model("product",product);
 const clientData = model("client",client);
 const purchaseData = model("purchase",purchase);
+const todolist = model("todo",todo);
 
-export { productData, clientData, purchaseData };
+export { productData, clientData, purchaseData, todolist };
